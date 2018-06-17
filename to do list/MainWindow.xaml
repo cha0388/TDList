@@ -18,9 +18,25 @@
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
             <StackPanel Grid.Row="1">
                 <StackPanel Name="TodoList"></StackPanel>
-                <Button Name="Addbtn" Click="Addbtn_Click">Add</Button>
             </StackPanel>
         </ScrollViewer>
+        
+        <Grid Grid.Row="2" Background="SteelBlue">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Column="0" Name="Addbtn" MouseDown="Addbtn_MouseDown" >
+                <Rectangle Name="MyRect" Width="30" Height="30" Stroke="Gray" StrokeThickness="2">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="White"></SolidColorBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+            
+        </Grid>
 
     </Grid>
 </Window>

@@ -25,13 +25,6 @@ namespace to_do_list
             InitializeComponent();
         }
 
-        private void Addbtn_Click(object sender, RoutedEventArgs e)
-        {
-            TodoItem item = new TodoItem();
-
-            TodoList.Children.Add(item);
-        }
-
         private void Window_Closed(object sender, EventArgs e)
         {
             string data = "";
@@ -75,5 +68,12 @@ namespace to_do_list
                 TodoList.Children.Add(item);
             }
 ;        }
+
+        private void Addbtn_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            TodoItem item = new TodoItem();
+
+            TodoList.Children.Add(item);
+        }
     }
 }
