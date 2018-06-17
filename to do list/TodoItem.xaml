@@ -9,17 +9,21 @@
     <Grid Background="White" Height="30">
         <!-- 定義格子 -->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="70"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="70"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <!-- 勾選框 -->
-        <Grid Grid.Column="0" x:Name="CheckBox" Background="Transparent" MouseDown="CheckBox_MouseDown">
+        <Grid Grid.Column="0" x:Name="CheckBox" Background="Transparent" >
 
-            <!-- 方框 -->
+            <TextBox x:Name="Date1" Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="5 0 40 0" BorderThickness="0" Foreground="Silver" MaxLength="2" GotKeyboardFocus="Date1_GotKeyboardFocus" IsKeyboardFocusedChanged="ItemNameTb_IsKeyboardFocusedChanged">0 </TextBox>
+            <Label Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" Margin="25 0" BorderThickness="0" Foreground="Silver">/</Label>
+            <TextBox x:Name="Date2" Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="40 0 5 0" BorderThickness="0" Foreground="Silver" MaxLength="2" GotKeyboardFocus="Date2_GotKeyboardFocus">0</TextBox>
+            
+            <!-- 方框 
             <Rectangle Width="20" Height="20" Stroke="Gray" StrokeThickness="2"></Rectangle>
 
-            <!-- 打勾 -->
             <Canvas x:Name="CheckMark">
                 <Rectangle Width="7" Height="3" Fill="Green" Canvas.Left="21" Canvas.Top="13">
                     <Rectangle.RenderTransform>
@@ -31,10 +35,13 @@
                         <RotateTransform Angle="-45"></RotateTransform>
                     </Rectangle.RenderTransform>
                 </Rectangle>
-            </Canvas>
+            </Canvas> -->
         </Grid>
 
-        <!-- 輸入框 -->
-        <TextBox x:Name="ItemNameTb" Grid.Column="1" VerticalContentAlignment="Center" BorderThickness="0">New Task</TextBox>
+        <!-- 內容框 -->
+        <TextBox x:Name="ItemNameTb" Grid.Column="1" FontSize="16" VerticalContentAlignment="Center" BorderThickness="0" Foreground="DimGray" GotKeyboardFocus="ItemNameTb_GotKeyboardFocus" >New Task</TextBox>
+
+        <!--價格-->
+        <TextBox x:Name="Price" Grid.Column="2" Margin="0 0 10 0" FontSize="18" VerticalContentAlignment="Center" HorizontalAlignment="Right" BorderThickness="0" Foreground="Turquoise" GotKeyboardFocus="Price_GotKeyboardFocus">0</TextBox>
     </Grid>
 </UserControl>

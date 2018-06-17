@@ -32,40 +32,12 @@ namespace to_do_list
             }
         }
 
-        public bool IsChecked
+        public string date
         {
-            set
-            {
-                if (value == true)
-                {
-                    CheckMark.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    CheckMark.Visibility = Visibility.Collapsed;
-                }
-            }
             get
             {
-                if(CheckMark.Visibility == Visibility)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        }
-        private void CheckBox_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (CheckMark.Visibility == Visibility)
-            {
-                CheckMark.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                CheckMark.Visibility = Visibility.Visible;
+                string D = "Date1.Text" +"/" + "Date2.Text";
+                return D ;
             }
         }
 
@@ -76,6 +48,37 @@ namespace to_do_list
         public string GetTaskName()
         {
             return ItemNameTb.Text;
+        }
+
+
+        private void ItemNameTb_IsKeyboardFocusedChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            
+            if (Date1.SelectionLength == 2)
+            {
+                Date2.Focus();
+            }
+
+        }
+
+        private void Date1_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            Date1.Clear();
+        }
+
+        private void Date2_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            Date2.Clear();
+        }
+
+        private void ItemNameTb_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            ItemNameTb.Clear();
+        }
+
+        private void Price_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            Price.Clear();
         }
     }
 }

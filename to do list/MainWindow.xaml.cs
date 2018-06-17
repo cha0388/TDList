@@ -31,14 +31,8 @@ namespace to_do_list
 
             foreach (TodoItem item in TodoList.Children)
             {
-                if(item.IsChecked == true)
-                {
-                    data += "+";
-                }
-                else
-                {
-                    data += "-";
-                }
+                data = item.date ;
+                
 
                 data += "|"+item.ItemName + "\r\n";
             }
@@ -61,17 +55,10 @@ namespace to_do_list
                 TodoItem item = new TodoItem();
                 item.ItemName = parts[1];
 
-                if(parts[0] == "+")
-                {
-                    item.IsChecked = true;
-                }
-                else
-                {
-                    item.IsChecked = false;
-                }
+                parts[0] = item.date;
                 TodoList.Children.Add(item);
-                }
-            }
+                } 
+}
             
 ;        }
 
