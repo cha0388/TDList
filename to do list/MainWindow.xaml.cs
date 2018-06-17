@@ -48,10 +48,14 @@ namespace to_do_list
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            string[] lines = System.IO.File.ReadAllLines(@"C:\temp\data.txt");
+            string FileName = "data.txt";
 
-            foreach(string line in lines)
+            if (System.IO.File.Exists(FileName))
             {
+                string[] lines = System.IO.File.ReadAllLines(@"C:\temp\data.txt");
+
+                foreach (string line in lines)
+                {
                 string[] parts = line.Split('|');
 
                 TodoItem item = new TodoItem();
@@ -66,7 +70,9 @@ namespace to_do_list
                     item.IsChecked = false;
                 }
                 TodoList.Children.Add(item);
+                }
             }
+            
 ;        }
 
         private void Addbtn_MouseDown(object sender, MouseButtonEventArgs e)

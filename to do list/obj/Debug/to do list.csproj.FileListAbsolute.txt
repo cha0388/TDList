@@ -31,3 +31,20 @@ C:\Users\w401\Desktop\TodoList-master\to do list\obj\Debug\to do list.g.resource
 C:\Users\w401\Desktop\TodoList-master\to do list\obj\Debug\to_do_list.Properties.Resources.resources
 C:\Users\w401\Desktop\TodoList-master\to do list\obj\Debug\to do list.csproj.GenerateResource.Cache
 C:\Users\w401\Desktop\TodoList-master\to do list\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\charl\OneDrive\桌面\TDList\to do list\bin\Debug\to do list.exe.config
+C:\Users\charl\OneDrive\桌面\TDList\to do list\bin\Debug\to do list.exe
+C:\Users\charl\OneDrive\桌面\TDList\to do list\bin\Debug\to do list.pdb
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.csprojResolveAssemblyReference.cache
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\MainWindow.g.cs
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\TodoItem.g.cs
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\App.g.cs
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list_MarkupCompile.cache
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list_MarkupCompile.lref
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\MainWindow.baml
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\TodoItem.baml
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.g.resources
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to_do_list.Properties.Resources.resources
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.csproj.GenerateResource.Cache
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.csproj.CoreCompileInputs.cache
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.exe
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.pdb
