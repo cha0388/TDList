@@ -27,15 +27,23 @@
                 <ColumnDefinition Width="50"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            
-            <Grid Grid.Column="0" Name="Addbtn" MouseDown="Addbtn_MouseDown" >
-                <Rectangle Name="MyRect" Width="30" Height="30" Stroke="Gray" StrokeThickness="2">
-                    <Rectangle.Fill>
-                        <SolidColorBrush Color="White"></SolidColorBrush>
-                    </Rectangle.Fill>
-                </Rectangle>
-            </Grid>
-            
+
+            <Border Background="White" BorderBrush="WhiteSmoke" BorderThickness="2"  CornerRadius="10" Margin="5 5">
+                <Grid Grid.Column="0" Name="Addbtn" MouseDown="Addbtn_MouseDown" >
+                    <Rectangle Margin="8 16.5">
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="DodgerBlue" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                    <Rectangle Margin="16.5 8">
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="DodgerBlue" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Grid>
+            </Border>
+
         </Grid>
 
     </Grid>
