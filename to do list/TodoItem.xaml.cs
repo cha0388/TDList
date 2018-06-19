@@ -51,16 +51,6 @@ namespace to_do_list
         }
 
 
-        private void ItemNameTb_IsKeyboardFocusedChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-            
-            if (Date1.SelectionLength == 2)
-            {
-                Date2.Focus();
-            }
-
-        }
-
         private void Date1_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
             Date1.Clear();
@@ -80,5 +70,16 @@ namespace to_do_list
         {
             Price.Clear();
         }
+
+        private void Plus_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void Minus_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
     }
-}
+    }
+

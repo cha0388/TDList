@@ -6,21 +6,24 @@
              xmlns:local="clr-namespace:to_do_list"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
+    
+    
     <Grid Background="White" Height="30">
         <!-- 定義格子 -->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="70"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="35"></ColumnDefinition>
             <ColumnDefinition Width="70"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <!-- 勾選框 -->
         <Grid Grid.Column="0" x:Name="CheckBox" Background="Transparent" >
 
-            <TextBox x:Name="Date1" Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="5 0 40 0" BorderThickness="0" Foreground="Silver" MaxLength="2" GotKeyboardFocus="Date1_GotKeyboardFocus" IsKeyboardFocusedChanged="ItemNameTb_IsKeyboardFocusedChanged">0 </TextBox>
-            <Label Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" Margin="25 0" BorderThickness="0" Foreground="Silver">/</Label>
-            <TextBox x:Name="Date2" Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="40 0 5 0" BorderThickness="0" Foreground="Silver" MaxLength="2" GotKeyboardFocus="Date2_GotKeyboardFocus">0</TextBox>
-            
+            <TextBox x:Name="Date1" Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="0 0 30 0" BorderThickness="0" Foreground="Silver" MaxLength="2" GotKeyboardFocus="Date1_GotKeyboardFocus" >0</TextBox>
+            <Label Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" Margin="16 0" BorderThickness="0" Foreground="Silver">/</Label>
+            <TextBox x:Name="Date2" Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="30 0 0 0" BorderThickness="0" Foreground="Silver" MaxLength="2" GotKeyboardFocus="Date2_GotKeyboardFocus">0</TextBox>
+
             <!-- 方框 
             <Rectangle Width="20" Height="20" Stroke="Gray" StrokeThickness="2"></Rectangle>
 
@@ -42,6 +45,49 @@
         <TextBox x:Name="ItemNameTb" Grid.Column="1" FontSize="16" VerticalContentAlignment="Center" BorderThickness="0" Foreground="DimGray" GotKeyboardFocus="ItemNameTb_GotKeyboardFocus" >New Task</TextBox>
 
         <!--價格-->
-        <TextBox x:Name="Price" Grid.Column="2" Margin="0 0 10 0" FontSize="18" VerticalContentAlignment="Center" HorizontalAlignment="Right" BorderThickness="0" Foreground="Turquoise" GotKeyboardFocus="Price_GotKeyboardFocus">0</TextBox>
+        <TextBox x:Name="Price" Grid.Column="3" FontSize="18" VerticalContentAlignment="Center" HorizontalAlignment="Right" BorderThickness="0" Foreground="Turquoise" GotKeyboardFocus="Price_GotKeyboardFocus" MaxLength="5" >0</TextBox>
+
+        <Grid Grid.Column="2">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0" Name="Plus" >
+                <Border Name="P" Background="PaleTurquoise" CornerRadius="5" Margin="5 1" MouseDown="Plus_MouseDown" ></Border>
+                <Rectangle Margin="14 6.5">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="DodgerBlue" />
+                    </Rectangle.Fill>
+                </Rectangle>
+
+
+                <Rectangle Margin="17 4">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="DodgerBlue" />
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+
+
+
+            <Grid Grid.Row="1" Name="Minus" >
+                <Border Name="N" Background="MistyRose" CornerRadius="5" Margin="5 1" MouseDown="Minus_MouseDown" >
+                    <Border.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" Command="" />
+                    </Border.InputBindings>
+                    <Rectangle Margin="9 5.5">
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="Salmon" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Border>
+            </Grid>
+            
+
+        </Grid>
+
     </Grid>
 </UserControl>

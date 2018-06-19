@@ -67,6 +67,9 @@ namespace to_do_list
             TodoItem item = new TodoItem();
 
             TodoList.Children.Add(item);
+
+           if(useAction.LeftClick==1)
+            Addbtn.Background = Brushes.LightGray;
         }
     }
 }
