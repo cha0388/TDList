@@ -20,25 +20,61 @@ namespace to_do_list
     /// </summary>
     public partial class MainWindow : Window
     {
+        int M;
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        public void Count()
+        {
+            foreach (TodoItem item in TodoList.Children)
+            {
+                M= int.Parse(item.Price1);
+                if(item.IsPlus)
+                {
+                    M += M;
+                }
+               else
+                {
+                    M -= M;
+                }
+                Money.Text = M.ToString();
+            }
+        }
+
         private void Window_Closed(object sender, EventArgs e)
         {
-            string data = "";
+            List<string> datas = new List<string>();
+            string data1 = "";
+            string data2 = "";
+            string Pl = "";
+            string data3 = "";
+            string Mon = "";
 
             foreach (TodoItem item in TodoList.Children)
             {
-                data = item.date ;
                 
+                data1 = item.date1 ;
+                data3 = item.Price1;
+                Mon = M.ToString();
 
-                data += "|"+item.ItemName + "\r\n";
+                if (item.IsPlus)
+                {
+                    Pl = "+";
+                }
+                else
+                {
+                    Pl = "-";
+                }
+
+                data1 +="|" + data2 + "|" +item.ItemName +"|"+ Pl + data3 +"|"+ Mon+ "\r\n";
             }
 
-            System.IO.File.WriteAllText(@"C:\temp\data.txt", data);
+            System.IO.File.WriteAllLines(@"C:\temp\data.txt", datas);
         }
+
+     
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -55,7 +91,10 @@ namespace to_do_list
                 TodoItem item = new TodoItem();
                 item.ItemName = parts[1];
 
-                parts[0] = item.date;
+                parts[0] = item.date1;
+                    parts[1] = item.date2;
+                    parts[2] = item.Price1;
+                    parts[4] = Money.Text+-999;
                 TodoList.Children.Add(item);
                 } 
 }
@@ -68,8 +107,6 @@ namespace to_do_list
 
             TodoList.Children.Add(item);
 
-           if(useAction.LeftClick==1)
-            Addbtn.Background = Brushes.LightGray;
         }
     }
 }

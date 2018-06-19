@@ -20,6 +20,7 @@ namespace to_do_list
     /// </summary>
     public partial class TodoItem : UserControl
     {
+        int A = 0;
         public string ItemName
         {
             get
@@ -32,12 +33,19 @@ namespace to_do_list
             }
         }
 
-        public string date
+        public string date1
         {
             get
             {
-                string D = "Date1.Text" +"/" + "Date2.Text";
-                return D ;
+                return Date1.Text;
+            }
+        }
+
+        public string date2
+        {
+            get
+            {
+                return Date2.Text;
             }
         }
 
@@ -71,14 +79,42 @@ namespace to_do_list
             Price.Clear();
         }
 
+       
+        public int Price2 = 0;
+
+        public string Price1
+        {
+            get
+            {
+                return Price.Text;
+            }
+            set
+            {
+                Price.Text = value;
+            }
+
+        }
+
+        public bool IsPlus
+        {
+            get
+            {
+                if (A==0)
+                    return false;
+                else
+                    return true;
+            }
+
+        }
+
         private void Plus_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            
+            A = 0;
         }
 
         private void Minus_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            
+            A = 1;
         }
     }
     }
