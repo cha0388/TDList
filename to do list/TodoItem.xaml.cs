@@ -33,19 +33,39 @@ namespace to_do_list
             }
         }
 
-        public string date1
+        public string D1
         {
             get
             {
                 return Date1.Text;
             }
+            set
+            {
+                Date1.Text = value;
+            }
         }
 
-        public string date2
+        public string D2
         {
             get
             {
                 return Date2.Text;
+            }
+            set
+            {
+                Date2.Text = value;
+            }
+        }
+
+        public string Pri
+        {
+            get
+            {
+                return Price.Text;
+            }
+            set
+            {
+                Price.Text = value;
             }
         }
 
@@ -79,43 +99,6 @@ namespace to_do_list
             Price.Clear();
         }
 
-       
-        public int Price2 = 0;
-
-        public string Price1
-        {
-            get
-            {
-                return Price.Text;
-            }
-            set
-            {
-                Price.Text = value;
-            }
-
-        }
-
-        public bool IsPlus
-        {
-            get
-            {
-                if (A==0)
-                    return false;
-                else
-                    return true;
-            }
-
-        }
-
-        private void Plus_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            A = 0;
-        }
-
-        private void Minus_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            A = 1;
-        }
     }
-    }
+}
 

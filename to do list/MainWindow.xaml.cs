@@ -30,45 +30,31 @@ namespace to_do_list
         {
             foreach (TodoItem item in TodoList.Children)
             {
-                M= int.Parse(item.Price1);
-                if(item.IsPlus)
-                {
-                    M += M;
-                }
-               else
-                {
-                    M -= M;
-                }
-                Money.Text = M.ToString();
+                int M =int.Parse(item.Price.Text);
             }
+            M += M;
+
+            Money.Text = M.ToString();
+        }
+
+        private void Addbtn_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            TodoItem item = new TodoItem();
+
+            TodoList.Children.Add(item);
+
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
             List<string> datas = new List<string>();
-            string data1 = "";
-            string data2 = "";
-            string Pl = "";
-            string data3 = "";
-            string Mon = "";
+
+            string line = "";
 
             foreach (TodoItem item in TodoList.Children)
             {
-                
-                data1 = item.date1 ;
-                data3 = item.Price1;
-                Mon = M.ToString();
 
-                if (item.IsPlus)
-                {
-                    Pl = "+";
-                }
-                else
-                {
-                    Pl = "-";
-                }
-
-                data1 +="|" + data2 + "|" +item.ItemName +"|"+ Pl + data3 +"|"+ Mon+ "\r\n";
+                line += item.D1 +"|" + item.D2 + "|" + item.ItemName +"|" + item.Pri + "\r\n";
             }
 
             System.IO.File.WriteAllLines(@"C:\temp\data.txt", datas);
@@ -86,27 +72,19 @@ namespace to_do_list
 
                 foreach (string line in lines)
                 {
-                string[] parts = line.Split('|');
+                    string[] parts = line.Split('|');
 
-                TodoItem item = new TodoItem();
-                item.ItemName = parts[1];
+                    TodoItem item = new TodoItem();
+                    item.ItemName = parts[1];
 
-                parts[0] = item.date1;
-                    parts[1] = item.date2;
-                    parts[2] = item.Price1;
-                    parts[4] = Money.Text+-999;
-                TodoList.Children.Add(item);
-                } 
-}
-            
+                    parts[0] = item.D1;
+                    parts[1] = item.D2;
+                    parts[2] = item.ItemName;
+                    parts[3] = item.Pri;
+
+                    TodoList.Children.Add(item);
+                }
+            }
 ;        }
-
-        private void Addbtn_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            TodoItem item = new TodoItem();
-
-            TodoList.Children.Add(item);
-
-        }
     }
 }
