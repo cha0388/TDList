@@ -5,13 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:to_do_list"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="300" Closed="Window_Closed" Loaded="Window_Loaded">
+        Title="MainWindow" Height="500" Width="300" WindowStyle="None" Closed="Window_Closed" Loaded="Window_Loaded" LostKeyboardFocus="Window_LostKeyboardFocus">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
         </Grid.RowDefinitions>
+
+        <StackPanel Name="close" Height="20" Width="16" Margin="260 0 0 0" Background="Transparent" MouseDown="close_MouseDown">
+            <Rectangle Height="1" Width="12" Margin="0 9">
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="45" CenterX="5" CenterY="1"></RotateTransform>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="DarkGray" />
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle Height="1" Width="12" Margin="0 -16 0 0" Fill="DarkGray">
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="-45" CenterX="5" CenterY="1"></RotateTransform>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+        </StackPanel>
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
             <StackPanel Grid.Row="1">
@@ -26,7 +43,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Border Background="White" BorderBrush="WhiteSmoke" BorderThickness="2"  CornerRadius="10" Margin="5 5" MouseDown="Addbtn_MouseDown">
+            <Border Background="White" BorderBrush="WhiteSmoke" BorderThickness="2"  CornerRadius="10" Margin="10 10 0 10" MouseDown="Addbtn_MouseDown">
                 <Grid Grid.Column="0" Name="Addbtn" >
                     <Rectangle Margin="8 16.5">
                         <Rectangle.Fill>
@@ -42,8 +59,8 @@
                 </Grid>
             </Border>
 
-            <TextBlock Grid.Column="1" HorizontalAlignment="Right" FontSize="12" Margin="180 6 10 5" Foreground="LightBlue">總金額</TextBlock>
-            <TextBlock Name="Money" Grid.Column="1" HorizontalAlignment="Right" FontSize="22" Margin="0 20 10 5" Foreground="White">0</TextBlock>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Right" FontSize="12" Margin="180 6 20 5" Foreground="LightBlue">總支出</TextBlock>
+            <TextBlock Name="Money" Grid.Column="1" HorizontalAlignment="Right" FontSize="22" Margin="0 20 20 5" Foreground="White">0</TextBlock>
         </Grid>
 
     </Grid>

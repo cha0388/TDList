@@ -20,85 +20,33 @@ namespace to_do_list
     /// </summary>
     public partial class TodoItem : UserControl
     {
-        int A = 0;
-        public string ItemName
-        {
-            get
-            {
-                return ItemNameTb.Text;
-            }
-            set
-            {
-                ItemNameTb.Text = value;
-            }
-        }
-
-        public string D1
-        {
-            get
-            {
-                return Date1.Text;
-            }
-            set
-            {
-                Date1.Text = value;
-            }
-        }
-
-        public string D2
-        {
-            get
-            {
-                return Date2.Text;
-            }
-            set
-            {
-                Date2.Text = value;
-            }
-        }
-
-        public string Pri
-        {
-            get
-            {
-                return Price.Text;
-            }
-            set
-            {
-                Price.Text = value;
-            }
-        }
-
         public TodoItem()
         {
             InitializeComponent();
         }
-        public string GetTaskName()
+
+        // 宣告變數Pri
+        public int Pri
         {
-            return ItemNameTb.Text;
+            get
+            {
+                // 測試能否將輸入的文字轉為數字(輸入的是否是數字)
+                try
+                {
+                    return int.Parse(Price.Text);
+                }
+                // 失敗後跳出提示
+                catch
+                {
+                    MessageBox.Show("請輸入數字");
+                    return 0;
+                }
+            }
+            set
+            {
+                Price.Text = value.ToString();
+            }
         }
-
-
-        private void Date1_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
-        {
-            Date1.Clear();
-        }
-
-        private void Date2_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
-        {
-            Date2.Clear();
-        }
-
-        private void ItemNameTb_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
-        {
-            ItemNameTb.Clear();
-        }
-
-        private void Price_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
-        {
-            Price.Clear();
-        }
-
     }
 }
 

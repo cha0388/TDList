@@ -13,16 +13,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"></ColumnDefinition>
             <ColumnDefinition ></ColumnDefinition>
-            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="65"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <!-- 勾選框 -->
         <Grid Grid.Column="0" x:Name="CheckBox" Background="Transparent" >
 
-            <TextBox x:Name="Date1" Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="0 0 30 0" BorderThickness="0" Foreground="Silver" MaxLength="2" GotKeyboardFocus="Date1_GotKeyboardFocus" >0</TextBox>
-            <Label Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" Margin="16 0" BorderThickness="0" Foreground="Silver">/</Label>
-            <TextBox x:Name="Date2" Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="30 0 0 0" BorderThickness="0" Foreground="Silver" MaxLength="2" GotKeyboardFocus="Date2_GotKeyboardFocus">0</TextBox>
-
+            <TextBlock Name="date" Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Silver">0 / 0</TextBlock>
             <!-- 方框 
             <Rectangle Width="20" Height="20" Stroke="Gray" StrokeThickness="2"></Rectangle>
 
@@ -41,10 +38,10 @@
         </Grid>
 
         <!-- 內容框 -->
-        <TextBox x:Name="ItemNameTb" Grid.Column="1" FontSize="16" VerticalContentAlignment="Center" BorderThickness="0" Foreground="DimGray" GotKeyboardFocus="ItemNameTb_GotKeyboardFocus" >New Task</TextBox>
+        <TextBox x:Name="ItemNameTb" Grid.Column="1" FontSize="16" VerticalContentAlignment="Center" Margin="10 0 0 0" BorderThickness="0" Foreground="DimGray">New Task</TextBox>
 
         <!--價格-->
-        <TextBox x:Name="Price" Grid.Column="3" FontSize="18" VerticalContentAlignment="Center" HorizontalAlignment="Right" BorderThickness="0" Foreground="Turquoise" GotKeyboardFocus="Price_GotKeyboardFocus" MaxLength="5" >0</TextBox>
+        <TextBox x:Name="Price" Grid.Column="3" FontSize="18" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0" BorderThickness="0" Foreground="Turquoise" MaxLength="5" >0</TextBox>
 
     </Grid>
 </UserControl>

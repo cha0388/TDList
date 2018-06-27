@@ -48,3 +48,8 @@ C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.csproj.Gen
 C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.csproj.CoreCompileInputs.cache
 C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.exe
 C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.pdb
+C:\Users\charl\OneDrive\桌面\TDList\to do list\bin\Debug\to do list.exe.manifest
+C:\Users\charl\OneDrive\桌面\TDList\to do list\bin\Debug\to do list.application
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.TrustInfo.xml
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.exe.manifest
+C:\Users\charl\OneDrive\桌面\TDList\to do list\obj\Debug\to do list.application
