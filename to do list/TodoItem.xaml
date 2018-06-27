@@ -16,25 +16,9 @@
             <ColumnDefinition Width="65"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <!-- 勾選框 -->
-        <Grid Grid.Column="0" x:Name="CheckBox" Background="Transparent" >
-
+        <!-- 日期框 -->
+        <Grid Grid.Column="0" Background="Transparent" >
             <TextBlock Name="date" Grid.Column="0" FontSize="14" FontFamily="Microsoft JhengHei" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Silver">0 / 0</TextBlock>
-            <!-- 方框 
-            <Rectangle Width="20" Height="20" Stroke="Gray" StrokeThickness="2"></Rectangle>
-
-            <Canvas x:Name="CheckMark">
-                <Rectangle Width="7" Height="3" Fill="Green" Canvas.Left="21" Canvas.Top="13">
-                    <Rectangle.RenderTransform>
-                        <RotateTransform Angle="45"></RotateTransform>
-                    </Rectangle.RenderTransform>
-                </Rectangle>
-                <Rectangle Width="9" Height="3" Fill="Green" Canvas.Left="22" Canvas.Top="17">
-                    <Rectangle.RenderTransform>
-                        <RotateTransform Angle="-45"></RotateTransform>
-                    </Rectangle.RenderTransform>
-                </Rectangle>
-            </Canvas> -->
         </Grid>
 
         <!-- 內容框 -->
